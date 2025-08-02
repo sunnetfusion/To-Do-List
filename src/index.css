@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* React Calendar Custom Styles */
+.react-calendar-container .react-calendar {
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  font-family: inherit !important;
+}
+
+.react-calendar-container .react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar-container .react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  border: none;
+  color: inherit;
+  border-radius: 8px;
+  padding: 8px;
+  transition: all 0.2s;
+}
+
+.react-calendar-container .react-calendar__navigation button:hover {
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.react-calendar-container .react-calendar__navigation button:disabled {
+  @apply text-gray-400 dark:text-gray-600;
+}
+
+.react-calendar-container .react-calendar__month-view__weekdays {
+  @apply text-sm font-medium text-gray-600 dark:text-gray-400;
+}
+
+.react-calendar-container .react-calendar__month-view__weekdays__weekday {
+  padding: 8px;
+  text-align: center;
+}
+
+.react-calendar-container .react-calendar__month-view__days__day {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  border-radius: 8px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.react-calendar-container .react-calendar__month-view__days__day:hover {
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.react-calendar-container .react-calendar__month-view__days__day--active {
+  @apply bg-indigo-500 text-white;
+}
+
+.react-calendar-container .react-calendar__month-view__days__day--neighboringMonth {
+  @apply text-gray-400 dark:text-gray-600;
+}
+
+.react-calendar-container .react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.react-calendar-container .react-calendar__tile:hover {
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.react-calendar-container .react-calendar__tile--active {
+  @apply bg-indigo-500 text-white;
+}
+
+.react-calendar-container .react-calendar__tile--now {
+  @apply bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
